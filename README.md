@@ -13,7 +13,18 @@ fork本项目，进入Settings->Secret and variables->Actions->New Repository se
 - ALIYUN_REGISTRY_USER
 - ALIYUN_REGISTRY_PASSWORD
 - ALIYUN_REGISTRY
-对应阿里云镜像上的配置
+
+对应上阿里云镜像服务的配置
 
 ## 添加想要同步的镜像
-在images.txt 上添加镜像即可
+在images.txt 上添加镜像即可，支持手动指定架构
+如：
+```bash
+# 基础镜像
+nginx
+golang:1.22.4-alpine3.20
+
+# 支持指定架构
+--platform=linux/amd64 alpine:3.20
+--platform=linux/arm64 alpine:3.20
+```
